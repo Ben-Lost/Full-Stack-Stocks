@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
+//import { Navbar } from 'react-bootstrap';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css"
+import Navbar from './Navbar';
 
 function App() {
   
   return (
     <>
-      <h1> Stock Market Tracker</h1>
+      <Navbar></Navbar>
     </>
   );
 }
