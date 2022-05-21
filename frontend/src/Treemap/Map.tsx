@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import Chart from "react-apexcharts";
 
+//treemap for displaying 24hr percent changes of stocks
+//treemap gives largest market cap stocks the biggest area
+//series: data needs to read data from api, stock name and market cap
+
 class Map extends React.Component<any, any> {
   constructor(props) {
     super(props);
-
     this.state = {
 
         options: {
@@ -113,19 +116,19 @@ class Map extends React.Component<any, any> {
 
   render() {
     return (
-      <div className="app">
-        <div className="row">
-          <div className="mixed-chart">
-            <Chart
-              options={this.state.options}
-              series={this.state.series}
-              type="treemap"
-              height="500"
-              width="500"
-            />
-          </div>
+        <div className="app">
+            <div className="row">
+            <div className="mixed-chart">
+                <Chart
+                options={this.state.options}
+                series={this.state.series}
+                type="treemap"
+                height="500"
+                width="500"
+                />
+            </div>
+            </div>
         </div>
-      </div>
     );
   }
 }

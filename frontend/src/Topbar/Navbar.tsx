@@ -1,6 +1,6 @@
-import React from 'react'
-import Search from './Search'
-import "./Navbar.css"
+import React from 'react';
+import Search from './Search';
+import "./Navbar.css";
 
 export default function Navbar() {
   return (
