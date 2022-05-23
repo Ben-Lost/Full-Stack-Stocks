@@ -4,17 +4,20 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css"
 import Navbar from './Topbar/Navbar';
 import Treemap from './Treemap/Treemap';
-import Watchlist from './Watchlist/Watchlist';
+import Indecies from './Indecies/indecies';
+import Stocklist from './Stocklist/Stocklist';
 
 function App() {
   
   return (
     <>
         <Navbar/>
+        
+        <Indecies/>
 
         <Treemap/>
 
-        <Watchlist/>
+        <Stocklist/>
     </>
     
   );

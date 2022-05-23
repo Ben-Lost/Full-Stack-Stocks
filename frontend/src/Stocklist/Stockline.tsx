@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Chart from "react-apexcharts";
 
 //in series: data section, stock name is line chart vlues from api
-class WatchlistLine extends React.Component<any, any> {
+class Stockline extends React.Component<any, any> {
     constructor(props) {
         super(props);
 
@@ -61,4 +61,4 @@ class WatchlistLine extends React.Component<any, any> {
     }
 }
 
-export default WatchlistLine;
+export default Stockline;

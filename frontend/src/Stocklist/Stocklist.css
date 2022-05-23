@@ -1,0 +1,15 @@
+.watchlist-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.watchlist-line {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.stock-name, .percent-change {
+    font-size: larger;
+    font-weight: bold;
+}
