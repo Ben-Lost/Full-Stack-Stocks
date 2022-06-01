@@ -1,18 +1,17 @@
-.watchlist-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.stock-name {
+    text-align: left;
 }
-
-.watchlist-container  {
-}
-
-.watchlist-line {
-    margin-left: 10vw;
-    margin-right: 10vw;
-}
-
-.stock-name, .percent-change {
+.stock-long-name, .percent-change, .market-price {
     font-size: larger;
-    font-weight: bold;
+    font-weight: medium;
+}
+
+.percent-change, .market-price, .market-cap {
+    text-align: right;
+    padding-right: 15px;
+}
+
+.stock-ticker {
+    font-size: medium;
+    color: rgb(93, 91, 90);
 }

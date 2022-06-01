@@ -1,15 +1,28 @@
-.watchlist-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+table {
+    box-shadow: 5px 10px;
+    width: 100%;
+    padding: 20px;
 }
 
-.watchlist-line {
-    margin-left: 10vw;
-    margin-right: 10vw;
+
+.name-header {
+    width: 300px;
+    text-align: left;
 }
 
-.stock-name, .percent-change {
-    font-size: larger;
-    font-weight: bold;
+.line-header {
+    width: 100px;
 }
+
+.price-header {
+    width: 100px;
+}
+
+.market-cap-header {
+    width: 200px;
+}
+
+.percent-change-header {
+    width: 100px;
+}
+   

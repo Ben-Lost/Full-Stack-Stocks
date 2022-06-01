@@ -8,12 +8,17 @@ import './Stockinfo.css'
 //should take argument of stock info
 export default function Stockinfo({stockinfo}) {
   return (
-        <div className='watchlist-container'>
-            <p className='stock-name'>{stockinfo.symbol}</p>
-            <div className='watchlist-line'>
+        <tr className='info-container'>
+            <td className='stock-name'>
+                <p className='stock-long-name'>{stockinfo.longName}</p>
+                <p className='stock-ticker'>{stockinfo.symbol}</p>
+            </td>
+            <td className='stockline'>
                 <Stockline/>
-            </div>
-            <p className='percent-change'>+2.3%</p>
-        </div>
+            </td>
+            <td className='market-cap'>${stockinfo.marketCap}</td>
+            <td className='market-price'>${stockinfo.regularMarketPrice}</td>
+            <td className='percent-change'>{stockinfo.regularMarketChangePercent}%</td>
+        </tr>
     )
 }

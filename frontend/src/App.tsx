@@ -13,7 +13,7 @@ class App extends React.Component<any, any> {
     constructor(props) {
         super(props);
         this.state = {
-            items: [],
+            quotesArr: [],
             isLoaded: false
         }
     }
@@ -23,7 +23,8 @@ class App extends React.Component<any, any> {
         //quotes for top 25 marketcap stocks
         var options = {
             method: 'GET',
-            url: 'https://yfapi.net/v6/finance/quote?region=US&lang=en&symbols=AAPL%2CMSFT%2CGOOGL%2CAMZN%2CTSLA%2CBRK-A%2CFB%2CTSM%2CJNJ%2CNVDA%2CUNH%2CV%2CXOM%2CJPM%2CPG%2CWMT%2CMA%2CCVX%2CHD%2CBAC%2CLLY%2CPFE%2CKO%2CABBV%2CBABA',
+            //url: 'https://yfapi.net/v6/finance/quote?region=US&lang=en&symbols=AAPL%2CMSFT%2CGOOGL%2CAMZN%2CTSLA%2CBRK-A%2CFB%2CTSM%2CJNJ%2CNVDA%2CUNH%2CV%2CXOM%2CJPM%2CPG%2CWMT%2CMA%2CCVX%2CHD%2CBAC%2CLLY%2CPFE%2CKO%2CABBV%2CBABA',
+            url: 'https://yfapi.net/v6/finance/quote?region=US&lang=en&symbols=AAPL%2CMSFT%2CGOOGL%2CAMZN%2CTSLA%2CBRK-A%2CFB%2CTSM%2CJNJ%2CNVDA%2CUNH%2CV%2CXOM%2CJPM%2CPG%2CWMT%2CMA%2CCVX%2CHD%2CBAC%2CLLY%2CPFE%2CKO%2CABBV%2CBABA%2C%5EIXIC%2CSPY%2C%5EDJI',
             headers: {
               'x-api-key': 'ZLGaf0o70P2ZBZZ9ZBXG6r15FkZkF8q3tjMHOSAe'
             }
@@ -33,7 +34,7 @@ class App extends React.Component<any, any> {
             console.log(response.data);
             //console.log(this.state.filterOnApi)
             this.setState({
-                items: response.data,
+                quotesArr: response.data.quoteResponse.result,
                 isLoaded: true
             })
         }).catch(function (error) {
@@ -42,7 +43,9 @@ class App extends React.Component<any, any> {
     }
 
     render() {
-        var {isLoaded, items} = this.state;
+        var {isLoaded, quotesArr} = this.state;
+        let indecies = quotesArr.splice(25,28);
+        console.log(indecies)
         if (!isLoaded) {
             <div>
                 Loading...
@@ -52,12 +55,9 @@ class App extends React.Component<any, any> {
             return(
                 <div>
                     <Navbar/>
-            
-                    <Indecies/>
-
+                    <Indecies indecies={indecies}/>
                     <Treemap/>
-
-                    <Stocklist items={items} />
+                    <Stocklist quotesArr={quotesArr}/>
                 </div>
             );
         }

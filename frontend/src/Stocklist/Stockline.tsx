@@ -11,8 +11,8 @@ class Stockline extends React.Component<any, any> {
                 
                 chart: {
                 type: 'line',
-                width: 100,
-                height: 35,
+                //width: 25,
+                //height: 25,
                 sparkline: {
                   enabled: true
                 }
@@ -51,8 +51,9 @@ class Stockline extends React.Component<any, any> {
                 options={this.state.options}
                 series={this.state.series}
                 type="line"
-                height="100"
-                width="150"
+                height="75px"
+                width="200px"
+                align="center"
                 />
             </div>
             </div>

@@ -1,18 +1,23 @@
 .indecies-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 3vw;
     margin-bottom: 3vw;
+    margin-right: 10vw;
+    margin-left: 10vw;
 }
 
 .index-title {
     display: flex;
     justify-content:space-between;
-    margin-right: 5vw;
-    margin-left: 5vw;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .percent-change {
-
+    font-size: medium;
 }
 
+.index-title {
+    font-size: medium;
+}
