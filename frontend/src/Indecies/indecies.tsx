@@ -7,7 +7,7 @@ export default function indecies() {
     <div className='indecies-container'>
         <div className='index'>
             <div className='index-title'>
-                <p className='stock-name'>Index name</p>t
+                <p className='stock-name'>Index name</p>
                 <p className='percent-change'>+2.3%</p>
             </div>
             <div className='watchlist-line'>

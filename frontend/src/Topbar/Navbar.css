@@ -1,23 +1,20 @@
-li {
-    list-style-type: none;
-    flex-wrap: wrap;
-}
-
-a {
-    text-decoration: none;
-}
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     min-height: 10vh;
     align-items: center;
     background-color: blanchedalmond;
 }
 
+nav .logo-container {
+    margin-left: 50px;
+}
+
 nav .logo {
     font-size: larger;
     font-weight: bolder;
+  
 }
 
 nav .nav-links {
@@ -32,3 +29,9 @@ nav .nav-links a {
     font-size: 20px;
     font-weight: normal;
 }
+
+li {
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+

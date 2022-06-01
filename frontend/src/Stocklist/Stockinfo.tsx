@@ -6,10 +6,10 @@ import './Stockinfo.css'
 //and percent change (24hr) in percent change
 
 //should take argument of stock info
-export default function Stockinfo() {
+export default function Stockinfo({stockinfo}) {
   return (
         <div className='watchlist-container'>
-            <p className='stock-name'>Stock name</p>
+            <p className='stock-name'>{stockinfo.symbol}</p>
             <div className='watchlist-line'>
                 <Stockline/>
             </div>

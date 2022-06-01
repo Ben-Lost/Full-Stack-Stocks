@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <div>
         <nav>
-            <div>
+            <div className='logo-container'>
                 <div className="logo">Stock Market Tracker</div>
                 <Search/>
             </div>
