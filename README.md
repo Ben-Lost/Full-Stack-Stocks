@@ -10,5 +10,5 @@ LIVE LINK: N/A
 # Features
 
 * View overall perfomance with graphs (Stocks,Futures,Indecies)
+* Treemap to quickly view Stock performance
 * Search Individual stocks, viewing current prices and past prices
-* Creating your own watchlist of stocks to save and view
