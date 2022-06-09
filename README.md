@@ -10,4 +10,5 @@ This is a full stack web application used to track the Stock Market. It allows u
 * View overall perfomance with graphs (Stocks,Futures,Indecies)
 * Treemap to quickly view Stock performance
 
-** This project is frontend only
+# Build
+This project is frontend only so only npm install/start is needed
