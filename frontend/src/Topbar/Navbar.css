@@ -4,7 +4,7 @@ nav {
     justify-content: space-between;
     min-height: 10vh;
     align-items: center;
-    background-color: blanchedalmond;
+    background-color: rgba(205, 241, 255, 0.687);
 }
 
 nav .logo-container {

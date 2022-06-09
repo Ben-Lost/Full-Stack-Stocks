@@ -8,7 +8,6 @@ export default function Navbar() {
         <nav>
             <div className='logo-container'>
                 <div className="logo">Stock Market Tracker</div>
-                <Search/>
             </div>
             <ul className='nav-links'> 
                 <li><a>Home</a></li>

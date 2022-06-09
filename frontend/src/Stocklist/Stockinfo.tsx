@@ -1,6 +1,7 @@
 import React from 'react'
 import Stockline from './Stockline'
 import './Stockinfo.css'
+import StocklineFetch from './StocklineFetch'
 
 //needs to read data from api and enter name in stockname
 //and percent change (24hr) in percent change
@@ -14,11 +15,11 @@ export default function Stockinfo({stockinfo}) {
                 <p className='stock-ticker'>{stockinfo.symbol}</p>
             </td>
             <td className='stockline'>
-                <Stockline/>
+                <StocklineFetch fetch={stockinfo.symbol}/>
             </td>
             <td className='market-cap'>${stockinfo.marketCap}</td>
             <td className='market-price'>${stockinfo.regularMarketPrice}</td>
-            <td className='percent-change'>{stockinfo.regularMarketChangePercent}%</td>
+            <td className='percent-change'>{stockinfo.regularMarketChangePercent.toFixed(2)}%</td>
         </tr>
     )
 }

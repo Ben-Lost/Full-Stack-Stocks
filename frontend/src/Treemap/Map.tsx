@@ -5,22 +5,22 @@ import Chart from "react-apexcharts";
 //treemap gives largest market cap stocks the biggest area
 //series: data needs to read data from api, stock name and market cap
 
+
 class Map extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {
-
         options: {
-            legend: {
+            /*legend: {
             show: false
-          },
+          },*/
           chart: {
             height: 350,
             type: 'treemap'
           },
-          title: {
+          /*title: {
             text: 'Treemap example'
-          },
+          },*/
           dataLabels: {
             enabled: true,
             style: {
@@ -34,18 +34,18 @@ class Map extends React.Component<any, any> {
           plotOptions: {
             treemap: {
               enableShades: true,
-              shadeIntensity: 0.5,
+              shadeIntensity: .2,
               reverseNegativeShade: true,
               colorScale: {
                 ranges: [
                   {
-                    from: -6,
+                    from: -100,
                     to: 0,
                     color: '#CD363A'
                   },
                   {
                     from: 0.001,
-                    to: 6,
+                    to: 100,
                     color: '#52B12C'
                   }
                 ]
@@ -55,60 +55,7 @@ class Map extends React.Component<any, any> {
         },
         series: [
             {
-              data: [
-                {
-                  x: 'INTC',
-                  y: 1.2
-                },
-                {
-                  x: 'GS',
-                  y: 0.4
-                },
-                {
-                  x: 'CVX',
-                  y: -1.4
-                },
-                {
-                  x: 'GE',
-                  y: 2.7
-                },
-                {
-                  x: 'CAT',
-                  y: -0.3
-                },
-                {
-                  x: 'RTX',
-                  y: 5.1
-                },
-                {
-                  x: 'CSCO',
-                  y: -2.3
-                },
-                {
-                  x: 'JNJ',
-                  y: 2.1
-                },
-                {
-                  x: 'PG',
-                  y: 0.3
-                },
-                {
-                  x: 'TRV',
-                  y: 0.12
-                },
-                {
-                  x: 'MMM',
-                  y: -2.31
-                },
-                {
-                  x: 'NKE',
-                  y: 3.98
-                },
-                {
-                  x: 'IYT',
-                  y: 1.67
-                }
-              ]
+              data: this.props.data
             }
           ],
     };
@@ -134,57 +81,3 @@ class Map extends React.Component<any, any> {
 }
 
 export default Map;
-
-//functional treemap
-/*export default function Map() {
-    const [options, setObject] = useState({
-        chart: {
-            id: "treemap"
-          },
-          
-    })
-
-    
-    const [series, setSeries] = useState ([{
-        data: [
-            {
-              x: "APPL",
-              y: 218,
-            },
-            {
-              x: "GOOG",
-              y: 149,
-            },
-            {
-              x: "NVDA",
-              y: 184,
-            },
-            {
-              x: "AMZN",
-              y: 55,
-            },
-            {
-              x: "TSLA",
-              y: 84,
-            },
-            {
-              x: "UPST",
-              y: 31,
-            },
-            {
-              x: "TEST",
-              y: 70,
-            }
-        ]
-    }])
-
-    return (
-        <Chart
-            options={options}
-            series={series}
-            type="treemap"
-            width="500"
-        />
-  )
-}*/
-

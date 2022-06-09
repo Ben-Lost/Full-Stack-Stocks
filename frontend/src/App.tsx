@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 //import { Navbar } from 'react-bootstrap';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css"
 import Navbar from './Topbar/Navbar';
 import Treemap from './Treemap/Treemap';
-import Indecies from './Indecies/indecies';
+import Indecies from './Indecies/Indecies';
 import Stocklist from './Stocklist/Stocklist';
 import axios from 'axios';
 
@@ -28,7 +27,7 @@ class App extends React.Component<any, any> {
             headers: {
               'x-api-key': 'ZLGaf0o70P2ZBZZ9ZBXG6r15FkZkF8q3tjMHOSAe'
             }
-          };
+        };
 
         axios.request(options).then((response) => {
             console.log(response.data);
@@ -47,36 +46,24 @@ class App extends React.Component<any, any> {
         let indecies = quotesArr.splice(25,28);
         console.log(indecies)
         if (!isLoaded) {
-            <div>
-                Loading...
-            </div>
+
+    
         }
         else {
             return(
                 <div>
                     <Navbar/>
-                    <Indecies indecies={indecies}/>
-                    <Treemap/>
+                    <div className='overview-container'>
+                        <Indecies indecies={indecies}/>
+                        <Treemap quotesArr={quotesArr}/>
+                    </div>
                     <Stocklist quotesArr={quotesArr}/>
                 </div>
             );
         }
-        
+
     }
 }
-
-/*
-export default App;
-function App() {
-  
-  return (
-    <>
-       
-    </>
-    
-  );
-}
-*/
 
 
 export default App;

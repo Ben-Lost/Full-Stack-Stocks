@@ -8,7 +8,6 @@ class Stockline extends React.Component<any, any> {
 
         this.state = {
             options: {
-                
                 chart: {
                 type: 'line',
                 //width: 25,
@@ -37,12 +36,17 @@ class Stockline extends React.Component<any, any> {
                 }
             },
             series: [{
-                data: [25, 66, 41, 89, 63, 25, 44, 12, 36, 9, 54]
-              }]
+                colors: ['#27B50E'],
+                data: this.props.priceHistory
+              }],
+            
+    
         };
     }
+   
 
     render (){
+        
         return(
         <div className="app">
             <div className="row">
